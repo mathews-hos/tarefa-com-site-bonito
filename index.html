@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,91 +7,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 </head>
 
 <body data-bs-theme="dark">
     <nav class="nav navbar bg-body-secondary">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="#"> <img src="img/129777645.jfif" alt="" height="35">tarefa
+            <a class="navbar-brand px-1" href="#"> <img src="img/129777645.jfif" alt="" height="35">tarefa
             </a>
             <a href="" class="nav-link">github</a>
         </div>
 
     </nav>
-    <div class="container">
-        <div class="row text-center">
+    <form class="container">
+        <div class="row text-center mt-4">
             <h2 class="col-12">área do círculo</h2>
-            <div class="col-12 input-group">
-                <input class="form-control" type="text" placeholder="n1">
-                <span class="input-group-text">+</span>
-                <input class="form-control" type="text" placeholder="n2">
-                <input class="form-control" type="button" onclick="" value="=">
-                <input class="form-control" type="text" readonly placeholder="resultado">
+            <div class="col-12 input-group mt-2">
+                <input class="form-control " id="input-raio-circ" type="text" placeholder="raio">
+                <span class="input-group-text px-1">²*π</span>
+                <span class="btn btn-outline-primary px-3" onclick="areacirc()">=</span>
+                <hr>
+                <input class="form-control border-light" id="output-raio-circ" type="text" readonly placeholder="resultado">
 
             </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center mt-4">
             <h2 class="col-12">hipotenusa</h2>
-            <div class="col-12 input-group">
-                <input class="form-control" type="text" placeholder="cateto 1">
-                <span class="input-group-text">²</span>
-                <input class="form-control" type="text" placeholder="cateto 2">
-                <span class="input-group-text">²</span>
-                <input class="form-control" type="button" onclick="" value="=">
-                <input class="form-control" type="text" readonly placeholder="hipotenusa">
-                <span class=" input-group-text">²</span>
+            <div class="col-12 input-group mt-2">
+                <input class="form-control" id="input-cateto-a" type="text" placeholder="cateto 1">
+                <span class="input-group-text px-1">²</span>
+                <input class="form-control" id="input-cateto-o" type="text" placeholder="cateto 2">
+                <span class="input-group-text px-1">²</span>
+                <span class="btn btn-outline-primary px-3" onclick="hipotenusa()">=</span>
+                <hr>
+                <input class="form-control border-light" id="output-hipotenusa" type="text" readonly placeholder="hipotenusa">
+                <span class=" input-group-text px-1">²</span>
 
             </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center mt-4">
             <h2 class="col-12">real para fak...dollar</h2>
-            <div class="col-12 input-group">
-                <span class="input-group-text">R$</span>
-                <input class="form-control" type="text" placeholder="n1">
-                <span class="input-group-text">cotação do dollar:</span>
-                <input class="form-control" type="text" placeholder="n2">
-                <input class="form-control" type="button" onclick="" value="=">
-                <span class="input-group-text">$</span>
-                <input class="form-control" type="text" readonly placeholder="resultado">
+            <div class="col-12 input-group mt-2">
+                <span class="input-group-text px-1">R$</span>
+                <input class="form-control" id="input-real" type="text" placeholder="reals">
+                <span class="input-group-text px-1">cotação do dollar:</span>
+                <input class="form-control" id="input-cota-doll" type="text" placeholder="doll">
+                <span class="btn btn-outline-primary px-3" onclick="realdoll()">=</span>
+                <span class="input-group-text px-1">$</span>
+                <input class="form-control border-light" id="output-dolls" type="text" readonly placeholder="dolls">
 
             </div>
         </div>
-        <div class="row text-center">
-            <h2 class="col-12">celso Fahrenheit</h2>
-            <div class="col-12 input-group">
-                <input class="form-control" type="text" placeholder="n1">
-                <span class="input-group-text">+</span>
-                <input class="form-control" type="text" placeholder="n2">
-                <input class="form-control" type="button" onclick="" value="=">
-                <input class="form-control" type="text" readonly placeholder="resultado">
+        <div class="row text-center mt-4">
+            <h2 class="col-12">celso Far and hight</h2>
+            <div class="col-12 input-group mt-2">
+                <input class="form-control" id="input-celso" type="text" placeholder="graus em celsos">
+                <span class="input-group-text px-1">°C</span>
+                <span class="btn btn-outline-primary px-3" onclick="celsofarenrait()">=</span>
+                <hr>
+                <input class="form-control border-light" id="output-far-and-hight" type="text" readonly placeholder="resultado">
 
             </div>
         </div>
-        <div class="row text-center">
-            <h2 class="col-12">media de 3 num</h2>
-            <div class="col-12 input-group">
-                <input class="form-control" type="text" placeholder="n1">
-                <span class="input-group-text">+</span>
-                <input class="form-control" type="text" placeholder="n2">
-                <input class="form-control" type="button" onclick="" value="=">
-                <input class="form-control" type="text" readonly placeholder="resultado">
+        <div class="row text-center mt-4">
+            <h2 class="col-12">media de notas <span class="btn btn-success" id="add-input-media"><strong>+</strong></span></h2>
+            <div class="col-12 input-group mt-2">
+                
+                <span  class="input-group-text px-2">(</span>
+                <input class="form-control input-media" type="text" placeholder="n1">
+                <span  class="input-group-text px-1">+</span>
+                <input class="form-control input-media" type="text" placeholder="n2">
+                <span  class="input-group-text px-1">+</span>
+                <input class="form-control input-media" type="text" placeholder="n3">
+                <span  class="input-group-text px-1">) ÷ 3</span>
+                <span class="btn btn-outline-primary px-3" onclick="medianota()">=</span>
+                <hr>
+                <input class="form-control border-light" id="output-media" type="text" readonly placeholder="resultado">
 
             </div>
         </div>
-        <div class="row text-center">
-            <h2 class="col-12">área do círculo</h2>
-            <div class="col-12 input-group">
-                <input class="form-control" type="text" placeholder="n1">
-                <span class="input-group-text">+</span>
-                <input class="form-control" type="text" placeholder="n2">
-                <input class="form-control" type="button" onclick="" value="=">
-                <input class="form-control" type="text" readonly placeholder="resultado">
+        <div class="row text-center mt-4">
+            <h2 class="col-12">asa delta e o maskara</h2>
+            <div class="col-12 input-group mt-2">
+                <input class="form-control" id="input-a-maskara" type="text" placeholder="a">
+                <span  class="input-group-text px-1">x²+</span>
+                <input class="form-control" id="input-b-maskara" type="text" placeholder="b">
+                <span  class="input-group-text px-1">x+</span>
+                <input class="form-control" id="input-c-maskara" type="text" placeholder="c">
+                <span class="btn btn-outline-primary px-3" onclick="maskara()">=</span>
+                <span  class="input-group-text px-">xI:</span>
+                <input class="form-control border-light" id="output-maskara-1" type="text" readonly placeholder="resultado">
+                <span  class="input-group-text px-">xII:</span>
+                <input class="form-control border-light" id="output-maskara-2" type="text" readonly placeholder="resultado">
 
             </div>
         </div>
 
-    </div>
+    </form>
 
 </body>
 
