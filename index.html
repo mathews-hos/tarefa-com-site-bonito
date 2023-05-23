@@ -28,8 +28,37 @@
                 <span class="input-group-text px-1">²*π</span>
                 <span class="btn btn-outline-primary px-3" onclick="areacirc()">=</span>
                 <hr>
-                <input class="form-control border-light" id="output-raio-circ" type="text" readonly
+                <input class="form-control border-light" id="output-area-circ" type="text" readonly
                     placeholder="resultado">
+                <span class=" input-group-text px-1">cm²</span>
+
+            </div>
+        </div>
+        <div class="row text-center mt-4">
+            <h2 class="col-12">Área do retângulo</h2>
+            <div class="col-12 input-group mt-2">
+                <input class="form-control" id="input-base-ret" type="text" placeholder="base">
+                <span class="input-group-text px-1">*</span>
+                <input class="form-control" id="input-altura-ret" type="text" placeholder="altura">
+                <span class="btn btn-outline-primary px-3" onclick="arearet()">=</span>
+                <hr>
+                <input class="form-control border-light" id="output-area-ret" type="text" readonly
+                    placeholder="hipotenusa">
+                <span class=" input-group-text px-1">cm²</span>
+
+            </div>
+        </div>
+        <div class="row text-center mt-4">
+            <h2 class="col-12">Área do triângulo</h2>
+            <div class="col-12 input-group mt-2">
+                <input class="form-control" id="input-base-tri" type="text" placeholder="base">
+                <span class="input-group-text px-1">*</span>
+                <input class="form-control" id="input-altura-tri" type="text" placeholder="altura">
+                <span class="btn btn-outline-primary px-3" onclick="areatri()">=</span>
+                <hr>
+                <input class="form-control border-light" id="output-area-tri" type="text" readonly
+                    placeholder="hipotenusa">
+                <span class=" input-group-text px-1">cm²</span>
 
             </div>
         </div>
@@ -37,7 +66,7 @@
             <h2 class="col-12">hipotenusa</h2>
             <div class="col-12 input-group mt-2">
                 <input class="form-control" id="input-cateto-a" type="text" placeholder="cateto 1">
-                <span class="input-group-text px-1">²</span>
+                <span class="input-group-text px-1">² +</span>
                 <input class="form-control" id="input-cateto-o" type="text" placeholder="cateto 2">
                 <span class="input-group-text px-1">²</span>
                 <span class="btn btn-outline-primary px-3" onclick="hipotenusa()">=</span>

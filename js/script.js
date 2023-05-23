@@ -1,11 +1,21 @@
 function areacirc() {
     let inp = document.getElementById("input-raio-circ")
-    let out = document.getElementById("output-raio-circ")
+    let out = document.getElementById("output-area-circ")
     out.value = (parseFloat(inp.value) * parseFloat(inp.value)) * 3.14
 }
 
-function arearetangulo() {
-    n
+function arearet() {
+    let inp1 = document.getElementById("input-base-ret")
+    let inp2 = document.getElementById("input-altura-ret")
+    let out = document.getElementById("output-area-ret")
+    out.value = (parseFloat(inp1.value) * parseFloat(inp2.value))
+}
+
+function areatri() {
+    let inp1 = document.getElementById("input-base-tri")
+    let inp2 = document.getElementById("input-altura-tri")
+    let out = document.getElementById("output-area-tri")
+    out.value = (parseFloat(inp1.value) * parseFloat(inp2.value)) / 2
 }
 
 function hipotenusa() {
