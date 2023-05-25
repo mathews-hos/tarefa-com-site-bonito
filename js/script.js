@@ -1,30 +1,44 @@
 function areacirc() {
+
     let inp = document.getElementById("input-raio-circ")
     let out = document.getElementById("output-area-circ")
 
     let saida = (parseFloat(inp.value) * parseFloat(inp.value)) * 3.14
-
-    if (!(inp.value> 0)) {
-        out.value = "insira apenas números reais positivos"
+    if (inp.value == "") {
+        out.value = "preencha os campos"
         return
     }
+    if (!(inp.value > 0)) {
+
+        out.value = "insira apenas números reais positivos"
+        return
+
+    }
+
     out.value = saida
 }
 
 // console.log(NaN == 0, NaN === 0 ,NaN <0, NaN <=0, NaN >0, NaN >=0)
 
 function arearet() {
+
     let inp1 = document.getElementById("input-base-ret")
     let inp2 = document.getElementById("input-altura-ret")
     let out = document.getElementById("output-area-ret")
+
     let saida = (parseFloat(inp1.value) * parseFloat(inp2.value))
-    if ((!(saida> 0)) && !(inp1.value * inp2.value> 0)) {
+
+    if ((!(saida > 0)) || !((inp1.value * inp2.value * inp2.value) > 0)) {
+
         out.value = "insira apenas números reais positivos"
         return
+
     } else {
+
         out.value = saida
+
     }
-    
+
 }
 
 function areatri() {
@@ -32,18 +46,42 @@ function areatri() {
     let inp2 = document.getElementById("input-altura-tri")
     let out = document.getElementById("output-area-tri")
 
-    
-    out.value = (parseFloat(inp1.value) * parseFloat(inp2.value)) / 2
+    let saida = (parseFloat(inp1.value) * parseFloat(inp2.value)) / 2
+
+
+    if ((!(saida > 0)) || !(inp1.value * inp2.value * inp2.value > 0)) {
+
+        out.value = "insira apenas números reais positivos"
+        return
+
+    } else {
+
+        out.value = saida
+
+    }
+
+
 }
 
 function hipotenusa() {
     let ca = document.getElementById("input-cateto-a")
     let co = document.getElementById("input-cateto-o")
     let out = document.getElementById("output-hipotenusa")
+    let n = Math.pow(parseFloat(ca.value), 2) + Math.pow(parseFloat(co.value), 2)
+    let saida = Math.sqrt(n)
 
-    let num = (parseFloat(ca.value) * parseFloat(ca.value)) + (parseFloat(co.value) * parseFloat(co.value))
-    out.value = Math.sqrt(num)
-    console.log(out)
+    if ((!(saida > 0)) || !(ca.value * co.value * co.value > 0)) {
+
+        out.value = "insira apenas números reais positivos"
+        return
+
+    } else {
+
+        out.value = saida
+
+    }
+
+    out.value = saida
 }
 
 function realdoll() {
